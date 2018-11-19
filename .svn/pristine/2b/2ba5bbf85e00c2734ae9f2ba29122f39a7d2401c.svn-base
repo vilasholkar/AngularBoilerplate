@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+.bg {
+    background: url('/assets/images/bg.jpg');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.transparent-form {
+    background: $mainColorLoaderBorder;
+    color: #f8f9fa;
+    margin-top: 5%;
+    font-weight: 400;
+}
+
+.image-section {
+    text-align: center;
+    margin-top: 10px;
+    img {
+        height: 80px;
+    }
+}

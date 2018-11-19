@@ -1,0 +1,15 @@
+<div class="row justify-content-center">
+  <div class="col-8 col-lg-4 col-xl-3 text-left transparent-form pb-2">
+    <form>
+      <div class="mb-3 border-bottom image-section">
+        <img src="assets/images/logo.png" class="avatar-xs mb-1" alt="">
+        <h5 class="text-uppercase">Reset Your Password</h5>
+      </div>
+      <div class="block mb-3"></div>
+      <p ng-disabled="" class="text-right">
+        <a [routerLink]="['/login']" class="text-warning">Retutn to login</a>
+      </p>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+$mainColor:#17a2b8;
+$mainColorLoaderBorder:rgba(0, 0, 0, 0.6);
+$backdropColor:rgba(0, 0, 0, 0.301);
+$white:white;
+$lightGrey:#b8c7ce;
+$darkGrey:#1e282c;
+$currencyColor:#e94d1c;

@@ -1,0 +1,66 @@
+<ng-sidebar-container>
+    <ng-sidebar
+    [(opened)]="sbConfig._opened"
+    [mode]="sbConfig._mode"
+    [position]="sbConfig._position"
+    [dockedSize]="'50px'"
+    [closeOnClickOutside]="sbConfig._closeOnClickOutside"
+    [autoFocus]="sbConfig._autoFocus"
+    [closeOnClickBackdrop]="sbConfig._closeOnClickBackdrop"
+    [showBackdrop]="sbConfig._showBackdrop"
+    [animate]="sbConfig._animate"
+    [sidebarClass]="'pos-sidebar bg-dark'"
+    [ariaLabel]="'pos-sidebar'">
+        <app-sidebar></app-sidebar>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <button type="button" class="btn btn-info btn-sm" (click)="_toggleOpened()">
+                    <i class="fa fa-navicon fa-2x "></i>
+                </button>
+                <a class="navbar-brand text-muted pl-2" >Angular 6</a>
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item d-none d-sm-block d-sm-none d-md-block">
+                        <a class="nav-link disabled">
+                            {{currentTime | date:'fullDate'}}
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{userInfo.firstname}} {{userInfo.lastname}}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right border-0 p-0 ">
+                            <li class="text-center ">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="text-center">
+                                        <img class="rounded-circle" src="../assets/images/male-profile.png" width="100" alt="User">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title"> {{userInfo.firstname}} {{userInfo.lastname}}</h5>
+                                        <small class="card-subtitle mb-2 text-muted">
+                                            <i class="fa  fa-envelope"></i>
+                                            {{userInfo.email}}
+                                            <br>
+                                            <i class="fa fa-phone"> </i>
+                                            {{userInfo.countryMobileCode}} {{userInfo.telephone}}
+                                        </small>
+                                        <div>
+                                            <button type="button" class="pull-left btn btn-info ">Profile</button>
+                                            <button type="button" class="pull-right btn btn-danger" (click)="logoutUser()">Sign Out</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+        <main class="pos-contents">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</ng-sidebar-container>

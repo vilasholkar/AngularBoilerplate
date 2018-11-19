@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+
+  <div class="col-8 col-lg-4 col-xl-3 text-left transparent-form pb-2">
+    <form [formGroup]="loginForm" (ngSubmit)="onClickSubmit()">
+      <div class="mb-3 border-bottom image-section">
+        <img src="assets/images/logo.png" class="avatar-xs mb-1" alt="">
+        <h5 class="text-uppercase">Login</h5>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control form-control-lg rounded-0" name="username" id="username" formControlName="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control form-control-lg rounded-0" id="password" name="password" formControlName="password">
+      </div>
+      <p ng-disabled="" class="text-right">
+        <a [routerLink]="['/forgot-password']" class="text-warning"> Forgot Password?</a>
+      </p>
+      <div class="block mb-3"></div>
+      <button class="btn btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Sign In</button>
+    </form>
+  </div>
+</div>

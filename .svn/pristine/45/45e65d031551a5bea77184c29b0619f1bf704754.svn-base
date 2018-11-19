@@ -1,0 +1,2 @@
+<ng-progress [trickleSpeed]="50" [thick]="true"></ng-progress>
+<router-outlet></router-outlet>
